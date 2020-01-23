@@ -1,0 +1,54 @@
+﻿@model LastPassApplication.Models.AddPassword
+
+@{
+
+    ViewBag.Title = "Decrypt";
+}
+
+<h2>Decrypt</h2>
+
+@using (Html.BeginForm("Decrypt", "Home", FormMethod.Post))
+
+{
+    
+
+
+<br/>
+<br/>
+@Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-3">
+            @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+            @Html.LabelFor(model => model.NameSite, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-3">
+                @Html.EditorFor(model => model.NameSite, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.NameSite, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+   
+
+    <div>
+        @Html.Label("This is your decrypted Password : " + Session["SitePassword"])
+    </div>
+
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Decrypt Password" class="btn btn-default" />
+        </div>
+    </div>
+
+</div>
+}
+

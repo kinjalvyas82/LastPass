@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LastPassDatabaseModelStoreContainer" CdmEntityContainer="LastPassDatabaseEntities1">
+    <EntitySetMapping Name="AddPassword">
+      <EntityTypeMapping TypeName="LastPassDatabaseModel.AddPassword">
+        <MappingFragment StoreEntitySet="AddPassword">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NameSite" ColumnName="NameSite" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="SitePassword" ColumnName="SitePassword" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

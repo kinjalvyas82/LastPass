@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LastPassDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AddPassword">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameSite" Type="varchar(max)" Nullable="false" />
+    <Property Name="UserName" Type="varchar(max)" Nullable="false" />
+    <Property Name="SitePassword" Type="varchar(max)" Nullable="false" />
+    <Property Name="Notes" Type="varchar(max)" />
+  </EntityType>
+  <EntityContainer Name="LastPassDatabaseModelStoreContainer">
+    <EntitySet Name="AddPassword" EntityType="Self.AddPassword" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
